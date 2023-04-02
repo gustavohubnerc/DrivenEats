@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>DrivenEats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="conteudo">
+        <div class="head">
+          <h1>DrivenEats</h1>
+          <h2>Sua comida em 6 minutos</h2>
+        </div>
+        <div class="principal">
+          <h3>Primeiro, seu prato</h3>
+        </div>
+        <div class="meal">
+          <div id="prato1" class="prato" onclick="selectedFood(this)">
+            <img class="frango" src="./assets/frango_yin_yang 1.svg" />
+            <div class="prato-nome">
+              <h4>Frango Yin Yang</h4>
+            </div>
+            <div class="descricao">
+              <h5>Um pouco de batata, um pouco de salada</h5>
+            </div>
+            <div class="preco">
+              <h6>R$14,90</h6>
+            </div>
+          </div>
+          <div id="prato2" class="prato" onclick="selectedFood(this)">
+            <img class="frango" src="./assets/frango_yin_yang 1.svg" />
+            <div class="prato-nome">
+              <h4>Frango Yin Yang</h4>
+            </div>
+            <div class="descricao">
+              <h5>Um pouco de batata, um pouco de salada</h5>
+            </div>
+            <div class="preco">
+              <h6>R$14,90</h6>
+            </div>
+          </div>
+          <div id="prato3" class="prato" onclick="selectedFood(this)">
+            <img class="frango" src="./assets/frango_yin_yang 1.svg" />
+            <div class="prato-nome">
+              <h4>Frango Yin Yang</h4>
+            </div>
+            <div class="descricao">
+              <h5>Um pouco de batata, um pouco de salada</h5>
+            </div>
+            <div class="preco">
+              <h6>R$14,90</h6>
+            </div>
+          </div>
+        </div>
+        <div class="bebida">
+          <h3>Agora, sua bebida</h3>
+        </div>
+        <div class="drink">
+          <div id="coca1" class="prato" onclick="selectedDrink(this)">
+            <img class="frango" src="./assets/coquinha_gelada 1.svg" />
+            <div class="bebida-nome">
+              <h4>Coquinha gelada</h4>
+            </div>
+            <div class="descricao">
+              <h5>Inconfundível</h5>
+            </div>
+            <div class="preco">
+              <h6>R$4,90</h6>
+            </div>
+          </div>
+          <div id="coca2" class="prato" onclick="selectedDrink(this)">
+            <img class="frango" src="./assets/coquinha_gelada 1.svg" />
+            <div class="bebida-nome">
+              <h4>Coquinha gelada</h4>
+            </div>
+            <div class="descricao">
+              <h5>Inconfundível</h5>
+            </div>
+            <div class="preco">
+              <h6>R$4,90</h6>
+            </div>
+          </div>
+          <div id="coca3" class="prato" onclick="selectedDrink(this)">
+            <img class="frango" src="./assets/coquinha_gelada 1.svg" />
+            <div class="bebida-nome">
+              <h4>Coquinha gelada</h4>
+            </div>
+            <div class="descricao">
+              <h5>Inconfundível</h5>
+            </div>
+            <div class="preco">
+              <h6>R$4,90</h6>
+            </div>
+          </div>
+        </div>
+        <div class="sobremesa">
+          <h3>Por fim, sua sobremesa</h3>
+        </div>
+        <div class="dessert">
+          <div id="pudim1" class="prato" onclick="selectedSobremesa(this)">
+            <img class="frango" src="./assets/pudim 1.svg" />
+            <div class="sobremesa-nome">
+              <h4>Pudim</h4>
+            </div>
+            <div class="descricao">
+              <h5>Um pudinzinho com calda</h5>
+            </div>
+            <div class="preco">
+              <h6>R$7,90</h6>
+            </div>
+          </div>
+          <div id="pudim2" class="prato" onclick="selectedSobremesa(this)">
+            <img class="frango" src="./assets/pudim 1.svg" />
+            <div class="sobremesa-nome">
+              <h4>Pudim</h4>
+            </div>
+            <div class="descricao">
+              <h5>Um pudinzinho com calda</h5>
+            </div>
+            <div class="preco">
+              <h6>R$7,90</h6>
+            </div>
+          </div>
+          <div id="pudim3" class="prato" onclick="selectedSobremesa(this)">
+            <img class="frango" src="./assets/pudim 1.svg" />
+            <div class="sobremesa-nome">
+              <h4>Pudim</h4>
+            </div>
+            <div class="descricao">
+              <h5>Um pudinzinho com calda</h5>
+            </div>
+            <div class="preco">
+              <h6>R$7,90</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="finalizar" onclick="mensagemWhatsapp()">
+        <button class="botaoSelecionar" disabled>
+          <p>Selecione 3 itens para fechar o pedido</p>
+        </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
