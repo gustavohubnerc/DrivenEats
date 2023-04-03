@@ -64,6 +64,7 @@ body {
   .frango {
     margin-left: 15px;
     margin-top: 18px;
+    border-radius: 4px;
   }
   
   .prato-nome, .bebida-nome, .sobremesa-nome {
@@ -113,18 +114,12 @@ body {
     margin-top: 25px;
   }
   
-  p {
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: #ffffff;
-  }
-  
   .botaoSelecionar {
     height: 61px;
     width: 364px;
     border-radius: 50px;
     background-color: #cbcbcb;
+    border: none;
   }
 
   .botaoFinalizar {
@@ -132,6 +127,7 @@ body {
     width: 364px;
     border-radius: 50px;
     background-color: #32B72F;
+    border: none;
   }
   
   .finalizar {
@@ -158,4 +154,11 @@ body {
   
   .selecionados {
     border: 4px #32B72F solid;
+  }
+
+  button {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
   }

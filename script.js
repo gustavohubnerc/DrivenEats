@@ -10,6 +10,8 @@ let infoSobremesa;
 let infoPreco3;
 let pedido3;
 
+let precoTotal = 0.0;
+
 function selectedFood(selecionados1) {
   const selecionadoAnterior1 = document.querySelector(".meal .selecionados");
 
@@ -18,13 +20,13 @@ function selectedFood(selecionados1) {
   }
 
   selecionados1.classList.add("selecionados");
-  const elementoPrato = document.querySelector(".prato-nome");
-  const elementoPreco1 = document.querySelector(".preco");
+  const elementoPrato = selecionados1.querySelector(".prato-nome");
+  const elementoPreco1 = selecionados1.querySelector(".preco");
   infoPrato = elementoPrato.textContent;
   infoPreco1 = elementoPreco1.textContent;
   pedido1 = selecionados1;
   finalizarPedido();
-}
+} 
 function selectedDrink(selecionados2) {
   const selecionadoAnterior2 = document.querySelector(".drink .selecionados");
 
@@ -32,8 +34,8 @@ function selectedDrink(selecionados2) {
     selecionadoAnterior2.classList.remove("selecionados");
   }
   selecionados2.classList.add("selecionados");
-  const elementoBebida = document.querySelector(".bebida-nome");
-  const elementoPreco2 = document.querySelector(".preco");
+  const elementoBebida = selecionados2.querySelector(".prato-nome");
+  const elementoPreco2 = selecionados2.querySelector(".preco");
   infoBebida = elementoBebida.textContent;
   infoPreco2 = elementoPreco2.textContent;
   pedido2 = selecionados2;
@@ -46,8 +48,8 @@ function selectedSobremesa(selecionados3) {
     selecionadoAnterior3.classList.remove("selecionados");
   }
   selecionados3.classList.add("selecionados");
-  const elementoSobremesa = document.querySelector(".sobremesa-nome");
-  const elementoPreco3 = document.querySelector(".preco");
+  const elementoSobremesa = selecionados3.querySelector(".prato-nome");
+  const elementoPreco3 = selecionados3.querySelector(".preco");
   infoSobremesa = elementoSobremesa.textContent;
   infoPreco3 = elementoPreco3.textContent;
   pedido3 = selecionados3;
@@ -55,9 +57,12 @@ function selectedSobremesa(selecionados3) {
 }
 function finalizarPedido() {
   if (pedido1!== undefined && pedido2!== undefined && pedido3!== undefined) {
-    const pedidoFeito = document.querySelector(".botaoSelecionar");
-    document.querySelector(".botaoSelecionar").removeAttribute("disabled");
-    pedidoFeito.classList.add(".botaoFinalizar");
+    const pedidoFeito = document.querySelector("#select");
+    if (document.querySelector("#select").hasAttribute("disabled")) {
+      document.querySelector("#select").removeAttribute("disabled");
+    }
+    pedidoFeito.classList.remove("botaoSelecionar");
+    pedidoFeito.classList.add("botaoFinalizar");
     pedidoFeito.innerHTML = "Fechar Pedido";
   }  
 }
@@ -79,5 +84,4 @@ function mensagemWhatsapp() {
     Total: R$ ${precoTotal.toFixed(2)}`;
     const whats = encodeURIComponent(mensagem);
     window.open(`https://wa.me/32988636723?text=${whats}`);
-    console.log(precoTotal);
 }
